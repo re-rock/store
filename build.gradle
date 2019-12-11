@@ -27,6 +27,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1'
 	compileOnly 'org.projectlombok:lombok'
+	compile group: 'org.webjars', name: 'bootstrap', version: '4.1.0'
+	compile group: 'org.webjars.bower', name: 'jquery', version: '3.4.1'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'mysql:mysql-connector-java'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'

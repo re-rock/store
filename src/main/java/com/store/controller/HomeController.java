@@ -1,4 +1,4 @@
-package com.store;
+package com.store.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +15,6 @@ public class HomeController {
 
         model.addAttribute("contents", "home :: home_contents");
 
-        return "layout";
+        return "base";
     }
 }

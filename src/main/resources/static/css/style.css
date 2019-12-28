@@ -2,6 +2,36 @@ body {
     font-family: 'Roboto', 'Noto', sans-serif;
 }
 
+.categories {
+    margin-bottom: 20px;
+}
+
+.full_width {
+    max-width: 1440px;
+}
+
+.half_width {
+    max-width: 720px;
+}
+
+.categories_img {
+    height: 320px;
+    width: 720px;
+    object-fit: cover;
+}
+
+.padding-zero {
+    padding: 0;
+}
+
+.item {
+    margin-bottom: 40px;
+}
+
+.item-title {
+    margin: 32px auto 32px auto;
+}
+
 .home-link {
     text-decoration: none;
     color: black;
@@ -35,4 +65,8 @@ a:link, a:visited, a:hover, a:active {
 
 .page-header {
     margin-top: 0px;
+}
+
+.margin-zero {
+    margin: 0 0 0 0;
 }

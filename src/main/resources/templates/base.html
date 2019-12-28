@@ -16,12 +16,12 @@
 <body>
 <!-- ヘッダ -->
 <p class="container-fluid">
-    <p class="text-center"><a class="home-link" href="#">store</a></p>
+    <p class="text-center"><a class="home-link" href="/home">store</a></p>
     <!--        <form method="post" th:action="@{/logout}">-->
     <!--            <button class="btn btn-link pull-right navbar-brand" type="submit">ログアウト</button>-->
     <!--        </form>-->
 </div>
-<ul class="nav justify-content-center">
+<ul class="nav justify-content-center categories">
     <li class="nav-item"><a href="/mens_outerwear" class="nav-link">Men's Outerwear</a></li>
     <li class="nav-item"><a href="/ladies_outerwear" class="nav-link">Ladies Outerwear</a></li>
     <li class="nav-item"><a href="/mens_tshirts" class="nav-link">Men's T-Shirts</a></li>
@@ -30,16 +30,13 @@
 
 <!-- コンテンツ -->
 <!-- 画面ごと切り分ける -->
-<div class="container-fluid">
-    <div th:include="__${contents}__"></div>
-</div>
+<div th:include="__${contents}__"></div>
 
 <!-- フッタ -->
 <div class="container-fluid">
     <div class="footer">
-        <p class="text-center"><small>2019 store copyrights</small></p>
+        <p class="text-center"><small>© 2019 store</small></p>
     </div>
 </div>
-
 </body>
 </html>

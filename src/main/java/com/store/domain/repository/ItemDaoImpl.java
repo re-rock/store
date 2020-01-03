@@ -20,7 +20,7 @@ public class ItemDaoImpl implements ItemDao {
     JdbcTemplate jdbc;
 
     @Override
-    public int count() throws DataAccessException {
+    public int countItemsNumber() throws DataAccessException {
 
         int count = jdbc.queryForObject("SELECT COUNT(*) FROM item", Integer.class);
         return count;

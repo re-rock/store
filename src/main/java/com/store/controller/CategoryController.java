@@ -38,6 +38,7 @@ public class CategoryController {
 
             model.addAttribute("count", count);
             model.addAttribute("items", items);
+
         } catch (DataAccessException e) {
             model.addAttribute("title", "トランザクション処理失敗");
         }

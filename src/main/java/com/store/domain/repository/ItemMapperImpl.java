@@ -47,7 +47,7 @@ public class ItemMapperImpl implements ItemMapper {
 
             // Itemインスタンス作成
             Item item = new Item();
-            item.setItemId((Long) map.get("item_id"));
+            item.setItemId((long) map.get("item_id"));
             item.setItemName((String) map.get("item_name"));
             item.setItemCategory((String) map.get("item_category"));
             item.setPrice((Integer) map.get("price"));

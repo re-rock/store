@@ -15,14 +15,14 @@ public class CategoryService {
     @Autowired
     ItemMybatisDao itemMybatisDao;
 
-    public int countItemsNumber() {
+    public int countCategoryItems(String categoryType) {
 
-        int count = itemMybatisDao.countItemsNumber();
+        int count = itemMybatisDao.countCategoryItems(categoryType);
         return count;
     }
 
     // カテゴリータイプから該当商品をDBから取得する
-    public List<Item> selectItems(String categoryType) {
+    public List<Item> selectCategoryItems(String categoryType) {
 
         List<Item> items = itemMybatisDao.selectItems(categoryType);
         return items;

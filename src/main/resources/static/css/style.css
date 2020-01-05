@@ -70,3 +70,13 @@ a:link, a:visited, a:hover, a:active {
 .margin-zero {
     margin: 0 0 0 0;
 }
+
+.category-title {
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.category-item-counter {
+    color: rgb(117, 117, 117);
+    font-size: 12px;
+}

@@ -6,10 +6,20 @@
 <body>
 <!-- ポイント：th:fragment -->
 <div th:fragment="category_contents">
-    <div class="page-header">
-        <div th:text="${title}">title</div>
-        <div th:text="${count}">商品数</div>
+    <!-- Men's Outerwear -->
+    <div class="container full_width">
+        <div class="row">
+            <img class="img-fluid" alt="@{title}" th:src="@{/img/mens_outerwear.jpg}"
+                 style="opacity: 1; transition: opacity 0.5s ease 0s;">
+        </div>
     </div>
+    <div class="row justify-content-center category-title">
+        <p class="margin-zero" th:text="${title}">Category Name</p>
+    </div>
+    <div class="row justify-content-center">
+        <p class="category-item-counter" th:text="'(' + ${totalCategoryItems} + ' Items)'">Nothing Items</p>
+    </div>
+
 </div>
 </body>
 </html>

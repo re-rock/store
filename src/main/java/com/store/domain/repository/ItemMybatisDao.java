@@ -10,13 +10,9 @@ import java.util.List;
 @Mapper
 public interface ItemMybatisDao {
 
-    // TODO テスト用全件取得
-//  int countItemsNumber();
-//    @Select("SELECT COUNT(*) FROM item")
-    int countItemsNumber();
+    // カテゴリー毎の登録商品数を取得
+    int countCategoryItems(String categoryType);
 
-//    public Item selectOne();
-
-    // 選択されたカテゴリーの全商品を取得
-    public List<Item> selectItems(String categoryType);
+    // 選択されたカテゴリーの全商品情報を取得
+    List<Item> selectItems(String categoryType);
 }

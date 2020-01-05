@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
+import static com.store.Constants.CATEGORY_NAME_MAP;
+
 @Controller
 public class CategoryController {
 
@@ -21,34 +23,23 @@ public class CategoryController {
      * カテゴリー画面のGET用メソッド
      */
     @GetMapping("/category/{type}")
-    public String getCategory (
-            @PathVariable("type") String type,
-            Model model) {
-
+    public String getCategory (@PathVariable("type") String type, Model model) {
         // 選択されたカテゴリー
         String categoryType = type;
-
-
-        // TODO TEST
         try {
-            int count = categoryService.countItemsNumber();
-
-            List<Item> items = categoryService.selectItems(categoryType);
-            System.out.println(items);
-
-            model.addAttribute("count", count);
-            model.addAttribute("items", items);
-
+            // カテゴリー毎の登録商品数を取得
+            int totalCategoryItems = categoryService.countCategoryItems(categoryType);
+            System.out.println(totalCategoryItems);
+            model.addAttribute("totalCategoryItems", totalCategoryItems);
+            // カテゴリー毎の全商品情報を取得
+            List<Item> itemList = categoryService.selectCategoryItems(categoryType);
+            model.addAttribute("itemList", itemList);
         } catch (DataAccessException e) {
-            model.addAttribute("title", "トランザクション処理失敗");
+            model.addAttribute("title", "DB処理失敗");
         }
-        // 対象カテゴリのアイテムをDBから取得
-
-        // DBアクセス->formに保存する
-
-        // 取得したデータをモデルに設定
-
-        model.addAttribute("title", categoryType);
+        model.addAttribute("title", CATEGORY_NAME_MAP.get(type));
+        // 対象カテゴリの画像ファイル名
+        model.addAttribute("imgFileName", type);
         model.addAttribute("contents", "category :: category_contents");
 
         return "base";

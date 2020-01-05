@@ -1,3 +1,9 @@
+.padding-zero {
+    padding: 0 !important;
+}
+.margin-zero {
+    margin: 0 0 0 0 !important;
+}
 body {
     font-family: 'Roboto', 'Noto', sans-serif;
 }
@@ -18,10 +24,6 @@ body {
     height: 320px;
     width: 720px;
     object-fit: cover;
-}
-
-.padding-zero {
-    padding: 0;
 }
 
 .item {
@@ -67,10 +69,6 @@ a:link, a:visited, a:hover, a:active {
     margin-top: 0px;
 }
 
-.margin-zero {
-    margin: 0 0 0 0;
-}
-
 .category-title {
     font-weight: 500;
     margin-top: 20px;
@@ -79,4 +77,20 @@ a:link, a:visited, a:hover, a:active {
 .category-item-counter {
     color: rgb(117, 117, 117);
     font-size: 12px;
+}
+
+.item-card {
+    margin-bottom: 25px;
+    border: none;
+}
+
+.item-img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.item-name {
+    font-weight: 400;
+    margin: 20px auto 0;
 }

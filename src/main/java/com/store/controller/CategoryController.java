@@ -29,7 +29,6 @@ public class CategoryController {
         try {
             // カテゴリー毎の登録商品数を取得
             int totalCategoryItems = categoryService.countCategoryItems(categoryType);
-            System.out.println(totalCategoryItems);
             model.addAttribute("totalCategoryItems", totalCategoryItems);
             // カテゴリー毎の全商品情報を取得
             List<Item> itemList = categoryService.selectCategoryItems(categoryType);

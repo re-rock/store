@@ -9,7 +9,7 @@
     <!-- Men's Outerwear -->
     <div class="container full_width">
         <div class="row">
-            <img class="img-fluid" alt="@{title}" th:src="@{/img/mens_outerwear.jpg}"
+            <img class="img-fluid" alt="@{title}" th:src="@{/img/{type}.jpg(type=${type})}"
                  style="opacity: 1; transition: opacity 0.5s ease 0s;">
         </div>
     </div>
@@ -23,7 +23,7 @@
     <div class="container full_width">
         <div class="card-group">
             <div class="col-md-4 padding-zero" th:each="item : ${itemList}">
-                <a class="" th:href="@{XXXXXXXXXXXXXXXXXX}">
+                <a class="" th:href="@{/detail/{itemId}(itemId=${item.itemId})}">
                     <div class="card item-card">
                         <img class="bd-placeholder-img card-img-top item-img" alt="Men's T-Shrits"
                              th:src="@{/img/mens_outerwear/mens_outerwear.jpg}"

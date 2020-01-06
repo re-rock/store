@@ -22,57 +22,15 @@
     <!-- cards -->
     <div class="container full_width">
         <div class="card-group">
-            <div class="col-md-4 padding-zero">
+            <div class="col-md-4 padding-zero" th:each="item : ${itemList}">
                 <a class="" th:href="@{XXXXXXXXXXXXXXXXXX}">
                     <div class="card item-card">
                         <img class="bd-placeholder-img card-img-top item-img" alt="Men's T-Shrits"
                              th:src="@{/img/mens_outerwear/mens_outerwear.jpg}"
                              style="opacity: 1; transition: opacity 0.5s ease 0s;">
                         <div class="card-body text-center padding-zero">
-                            <h5 class="card-title item-name">Item Name</h5>
-                            <p class="card-text"><small class="text-muted">$XXX.XXX</small></p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 padding-zero">
-                <a>
-                    <div class="card item-card">
-                        <img class="bd-placeholder-img card-img-top item-img" width="100%" height="300"
-                             alt="Men's T-Shrits"
-                             th:src="@{/img/mens_outerwear/mens_outerwear.jpg}"
-                             style="opacity: 1; transition: opacity 0.5s ease 0s;">
-                        <div class="card-body text-center padding-zero">
-                            <h5 class="card-title item-name">Card title</h5>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 padding-zero">
-                <a>
-                    <div class="card item-card">
-                        <img class="bd-placeholder-img card-img-top item-img" width="100%" height="300"
-                             alt="Men's T-Shrits"
-                             th:src="@{/img/mens_outerwear/mens_outerwear.jpg}"
-                             style="opacity: 1; transition: opacity 0.5s ease 0s;">
-                        <div class="card-body text-center padding-zero">
-                            <h5 class="card-title item-name">Card title</h5>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 padding-zero">
-                <a>
-                    <div class="card item-card">
-                        <img class="bd-placeholder-img card-img-top item-img" width="100%" height="300"
-                             alt="Men's T-Shrits"
-                             th:src="@{/img/mens_outerwear/mens_outerwear.jpg}"
-                             style="opacity: 1; transition: opacity 0.5s ease 0s;">
-                        <div class="card-body text-center padding-zero">
-                            <h5 class="card-title item-name">Card title</h5>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <h5 class="card-title item-name" th:text="${item.itemName}">Item Name</h5>
+                            <p class="card-text"><small class="text-muted" th:text="'￥' + ${item.price}">￥????</small></p>
                         </div>
                     </div>
                 </a>

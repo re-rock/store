@@ -19,7 +19,7 @@ public class ItemDaoImpl implements ItemDao {
     @Autowired
     JdbcTemplate jdbc;
 
-    @Override
+    @Override // TODO this method is never used...
     public int countItemsNumber() throws DataAccessException {
 
         int count = jdbc.queryForObject("SELECT COUNT(*) FROM item", Integer.class);
@@ -27,16 +27,10 @@ public class ItemDaoImpl implements ItemDao {
     }
 
     @Override
-    public Item selectOne() throws DataAccessException {
-
-        String sql = "SELECT * FROM item WHERE item_id = ?";
-
-        // ItemRowMapper itemRowMapper = new ItemRowMapper();
-        // BeanPropertyRowMapper
-        RowMapper<Item> rowMapper = new BeanPropertyRowMapper<>(Item.class);
-
-        return jdbc.queryForObject(sql, rowMapper, 1);
+    public Item selectItemInfo(String itemId) throws DataAccessException {
+        return null;
     }
+
 
     @Override
     public List<Item> selectItems(String categoryType) throws DataAccessException {

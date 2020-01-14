@@ -8,8 +8,10 @@
 <!-- ポイント：th:fragment -->
 <div th:fragment="item_contents">
     <div class="page-header">
-        <p th:text="${title}">????????</p>
-        <p>ここに商品の詳細を記載する</p>
+        <p th:text="${item.itemId}">????????</p>
+        <p th:text="${item.price}">????????</p>
+        <p th:text="${item.description}">????????</p>
+        <p th:text="${item.features}">????????</p>
     </div>
 </div>
 </body>

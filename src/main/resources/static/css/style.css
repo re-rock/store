@@ -88,6 +88,8 @@ a:link, a:visited, a:hover, a:active {
     width: 300px;
     height: 300px;
     margin: 0 auto;
+    opacity: 1;
+    transition: opacity 0.5s ease 0s;
 }
 
 .item-name {

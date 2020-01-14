@@ -26,6 +26,24 @@
             item_category = #{categoryType}
     </select>
 
+    <!-- select item information -->
+    <select id="selectItemInfo" parameterType="string" resultMap="item">
+    SELECT
+        item_id,
+        item_name,
+        item_category,
+        price,
+        stock_s,
+        stock_m,
+        stock_l,
+        description,
+        features
+    FROM
+        item
+    WHERE
+        item_id = #{itemId}
+    </select>
+
     <!-- カテゴリー毎の全商品を取得   -->
     <select id="selectItems" parameterType="string" resultMap="item">
     SELECT

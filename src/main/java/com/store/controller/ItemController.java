@@ -1,7 +1,7 @@
 package com.store.controller;
 
 import com.store.domain.model.Item;
-import com.store.domain.service.CategoryService;
+import com.store.domain.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Controller;
@@ -14,19 +14,21 @@ import java.util.List;
 import static com.store.Constants.CATEGORY_NAME_MAP;
 
 @Controller
-public class DetailController {
+public class ItemController {
 
-//    @Autowired
-//    ItemService ItemService;
+    @Autowired
+    ItemService ItemService;
 
     /**
      * カテゴリー画面のGET用メソッド
      */
     @GetMapping("/detail/{itemId}")
-    public String getCategory (@PathVariable("itemId") String itemId, Model model) {
+    public String getCategory(@PathVariable("itemId") String itemId, Model model) {
 
-        // 対象カテゴリの画像ファイル名
-        model.addAttribute("title", "detail item page!");
+        // get selected item information form db
+        Item item = ItemService.selectItemInfo(itemId);
+
+        model.addAttribute("item", item);
         model.addAttribute("contents", "item :: item_contents");
 
         return "base";

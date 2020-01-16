@@ -8,11 +8,23 @@
 <!-- ポイント：th:fragment -->
 <div th:fragment="item_contents">
     <div class="page-header">
-        <p th:text="${item.itemId}">????????</p>
-        <p th:text="${item.price}">????????</p>
-        <p th:text="${item.description}">????????</p>
-        <p th:text="${item.features}">????????</p>
+
     </div>
+    <main class="container item full_width">
+        <div class="row">
+            <!-- item image -->
+            <div class="col-md-8 item-img">
+                <p th:text="${item.itemId}">????????</p>
+            </div>
+            <!-- item infomartion -->
+            <aside class="col-md-4 item-imfo">
+                <p th:text="${item.itemId}">????????</p>
+                <p th:text="${item.price}">????????</p>
+                <p th:text="${item.description}">????????</p>
+                <p th:text="${item.features}">????????</p>
+            </aside>
+        </div>
+    </main>
 </div>
 </body>
 </html>

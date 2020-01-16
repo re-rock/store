@@ -25,8 +25,6 @@
             <div class="col-md-4 padding-zero" th:each="item : ${itemList}">
                 <a class="" th:href="@{/detail/{itemId}(itemId=${item.itemId})}">
                     <div class="card item-card">
-                        <!--                        <img class="bd-placeholder-img card-img-top item-img" alt="Men's T-Shrits"-->
-                        <!--                             th:src="@{'/img/' + ${item.itemCategory} + '/' + ${item.itemId} + '.jpg'}">-->
                         <!-- TODO img file path is temporary for development -->
                         <img class="bd-placeholder-img card-img-top item-img" alt="item_image"
                              th:src="@{'/img/' + ${item.itemCategory} + '/' + ${item.itemCategory} + '.jpg'}">

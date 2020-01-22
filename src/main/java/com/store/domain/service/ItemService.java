@@ -17,17 +17,14 @@ public class ItemService {
     @Autowired
     ItemMybatisDao itemMybatisDao;
 
-    // select item information from db
+    /**
+     * select item information from db
+     */
     public Item selectItemInfo(String itemId) {
         try {
             return itemMybatisDao.selectItemInfo(itemId);
         } catch (DataAccessException e) {
             throw e;
         }
-    }
-
-    public List<String> convertFeatureArray(String features) {
-        // convert to Array from String at comma
-        return null;
     }
 }

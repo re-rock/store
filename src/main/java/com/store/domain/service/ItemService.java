@@ -25,4 +25,9 @@ public class ItemService {
             throw e;
         }
     }
+
+    public List<String> convertFeatureArray(String features) {
+        // convert to Array from String at comma
+        return null;
+    }
 }

@@ -8,9 +8,9 @@ import java.util.List;
 public interface ItemDao {
 
     // TODO テスト用全件取得
-    public int count() throws DataAccessException;
+    public int countItemsNumber() throws DataAccessException;
 
-    public Item selectOne() throws DataAccessException;
+    public Item selectItemInfo(String itemId) throws DataAccessException;
 
     // 選択されたカテゴリーの全商品を取得
     public List<Item> selectItems(String categoryType) throws DataAccessException;

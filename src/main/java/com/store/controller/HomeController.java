@@ -12,9 +12,7 @@ public class HomeController {
      */
     @GetMapping("/home")
     public String getHome(Model model) {
-        System.out.println("revert押した状態でさらにPush!");
         model.addAttribute("contents", "home :: home_contents");
-        System.out.println("revertの練習です。");
         return "base";
     }
 }

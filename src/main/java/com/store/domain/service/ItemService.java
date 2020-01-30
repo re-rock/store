@@ -17,7 +17,9 @@ public class ItemService {
     @Autowired
     ItemMybatisDao itemMybatisDao;
 
-    // select item information from db
+    /**
+     * select item information from db
+     */
     public Item selectItemInfo(String itemId) {
         try {
             return itemMybatisDao.selectItemInfo(itemId);

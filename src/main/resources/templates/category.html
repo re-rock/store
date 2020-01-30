@@ -27,7 +27,7 @@
                     <div class="card item-card">
                         <!-- TODO img file path is temporary for development -->
                         <img class="bd-placeholder-img card-img-top item-img" alt="item_image"
-                             th:src="@{'/img/' + ${item.itemCategory} + '/' + ${item.itemCategory} + '.jpg'}">
+                             th:src="@{'/img/category/' + ${item.itemCategory} + '/' + ${item.itemCategory} + '.jpg'}">
                         <div class="card-body text-center padding-zero">
                             <h5 class="card-title item-name" th:text="${item.itemName}">Item Name</h5>
                             <p class="card-text"><small class="text-muted" th:text="'￥' + ${item.price}">￥????</small>

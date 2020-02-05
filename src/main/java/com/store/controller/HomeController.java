@@ -14,10 +14,6 @@ public class HomeController {
     public String getHome(Model model) {
         model.addAttribute("contents", "home :: home_contents");
 
-        System.out.println("commit-1");
-        System.out.println("commit-2");
-        System.out.println("commit-3");
-
         return "base";
     }
 }

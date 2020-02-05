@@ -15,6 +15,8 @@ public class HomeController {
 
         model.addAttribute("contents", "home :: home_contents");
 
+        System.out.println("commit-1");
+
         return "base";
     }
 }

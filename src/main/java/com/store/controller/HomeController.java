@@ -12,7 +12,6 @@ public class HomeController {
      */
     @GetMapping("/home")
     public String getHome(Model model) {
-
         model.addAttribute("contents", "home :: home_contents");
 
         System.out.println("commit-1");

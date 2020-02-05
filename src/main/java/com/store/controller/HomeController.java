@@ -14,6 +14,7 @@ public class HomeController {
     public String getHome(Model model) {
         model.addAttribute("contents", "home :: home_contents");
 
+        System.out.println("test1");
         return "base";
     }
 }

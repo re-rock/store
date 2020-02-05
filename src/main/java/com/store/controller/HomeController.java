@@ -15,6 +15,7 @@ public class HomeController {
         model.addAttribute("contents", "home :: home_contents");
 
         System.out.println("test1");
+        System.out.println("test2");
         return "base";
     }
 }
